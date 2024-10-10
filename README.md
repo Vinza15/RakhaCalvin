@@ -1,28 +1,28 @@
-Fitur
-Pelacakan Status Pesanan: Setiap meja melacak status pesanan yang dapat berada dalam salah satu dari tiga kondisi:
+Sistem Pelacakan Status Pesanan & Manajemen Emosi Pelanggan
+Deskripsi Fitur
+1. Pelacakan Status Pesanan
+Setiap meja memiliki status pesanan yang dapat berubah melalui tiga kondisi:
 
 NotTaken (Belum Diambil): Pesanan belum diambil oleh pelayan.
 InKitchen (Di Dapur): Pesanan sedang diproses di dapur.
-Served (Telah Disajikan): Pesanan telah diantarkan ke meja pelanggan.
-Manajemen Emosi Pelanggan:
+Served (Telah Disajikan): Pesanan telah diantarkan ke pelanggan.
+2. Manajemen Emosi Pelanggan
+Pelanggan memiliki nilai emosi maksimal 5. Jika pesanan mereka terlambat, nilai emosi berkurang setiap detik. Setelah pesanan diantar, emosi pelanggan akan kembali ke nilai maksimal.
 
-Setiap pelanggan memulai dengan nilai emosi maksimal yaitu 5.
-Nilai emosi pelanggan berkurang seiring waktu jika mereka harus menunggu terlalu lama untuk pesanan mereka.
-Setelah pesanan diantarkan, nilai emosi diatur kembali menjadi 5, yang menandakan kepuasan maksimal.
-Notifikasi Pesanan:
+3. Notifikasi Pesanan
+Ketika status pesanan berubah menjadi InKitchen, program mensimulasikan notifikasi kepada pelayan bahwa pesanan siap diantarkan ke meja.
 
-Ketika status pesanan berubah menjadi InKitchen, sistem akan mensimulasikan notifikasi kepada pelayan bahwa pesanan siap diantarkan ke meja pelanggan.
-Simulasi Waktu:
+4. Simulasi Waktu
+Waktu disimulasikan dalam interval 1 detik selama 60 detik. Status pesanan dan emosi pelanggan diperbarui setiap detik.
 
-Program ini mensimulasikan berjalannya waktu dengan interval 1 detik selama periode 60 detik.
-Status pesanan dan emosi pelanggan diperbarui setiap detik sesuai dengan simulasi waktu tersebut.
-Cara Kerja
-Pada awal program, beberapa meja dengan status pesanan yang berbeda dibuat.
-Program ini kemudian mensimulasikan penurunan emosi pelanggan berdasarkan waktu yang berlalu.
-Status pesanan dapat berubah dari NotTaken menjadi InKitchen, dan kemudian menjadi Served secara otomatis setelah beberapa detik.
-Jika pesanan telah diantar ke meja, emosi pelanggan diatur kembali ke 5.
-Selama simulasi, status pesanan dan emosi pelanggan akan ditampilkan setiap detik.
+Alur Program
+Pada awal simulasi, beberapa meja diinisialisasi dengan status pesanan yang berbeda. Selama simulasi, program akan:
+
+Menurunkan emosi pelanggan jika mereka menunggu lama.
+Mengubah status pesanan secara otomatis dari NotTaken menjadi InKitchen, lalu Served.
+Mengembalikan emosi pelanggan ke 5 setelah pesanan diantar.
+Menampilkan status pesanan dan emosi pelanggan setiap detik.
 Struktur Kelas
 Order: Mengelola status dan detail pesanan.
-CustomerEmotion: Mengelola nilai emosi pelanggan yang berkurang setiap detik jika mereka harus menunggu terlalu lama.
-Table: Mengelola pesanan dan emosi pelanggan di setiap meja serta menampilkan notifikasi saat pesanan siap.
+CustomerEmotion: Mengatur nilai emosi pelanggan dan perubahan seiring waktu.
+Table: Mengelola pesanan dan emosi pelanggan di meja serta memberikan notifikasi saat pesanan siap.
