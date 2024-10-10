@@ -1,28 +1,30 @@
-Sistem Pelacakan Status Pesanan & Manajemen Emosi Pelanggan
-Deskripsi Fitur
-1. Pelacakan Status Pesanan
-Setiap meja memiliki status pesanan yang dapat berubah melalui tiga kondisi:
+**Restaurant Management Game**
+**Deskripsi**
+Program ini adalah simulasi sederhana dari game manajemen restoran di mana pemain bisa melakukan beberapa aktivitas seperti menempatkan pelanggan di meja, mengambil pesanan, mengantar pesanan, dan membersihkan meja. Program ini menggunakan konsep Object-Oriented Programming (OOP) dengan beberapa kelas utama seperti Customer, Table, Player, dan Game.
 
-NotTaken (Belum Diambil): Pesanan belum diambil oleh pelayan.
-InKitchen (Di Dapur): Pesanan sedang diproses di dapur.
-Served (Telah Disajikan): Pesanan telah diantarkan ke pelanggan.
-2. Manajemen Emosi Pelanggan
-Pelanggan memiliki nilai emosi maksimal 5. Jika pesanan mereka terlambat, nilai emosi berkurang setiap detik. Setelah pesanan diantar, emosi pelanggan akan kembali ke nilai maksimal.
+**Fitur**
+1. Tempatkan pelanggan di meja: Pemain dapat menempatkan pelanggan yang ada di antrian ke meja yang kosong.
+2. Ambil pesanan: Pemain dapat mengambil pesanan dari meja yang telah ditempati pelanggan.
+3. Antar pesanan: Pemain mengantar pesanan ke meja yang sesuai, pelanggan otomatis membayar setelah pesanan diantarkan.
+4. Bersihkan meja: Setelah pelanggan membayar, meja dapat dibersihkan dan digunakan untuk pelanggan berikutnya.
+5. Multi-table management: Program dapat mengelola hingga 4 meja dengan pelanggan yang mengantri.
+   
+**Kelas Utama**
+1. Customer: Kelas ini merepresentasikan pelanggan yang memiliki atribut ID, status apakah telah memesan, dan status pembayaran.
+2. Table: Kelas ini merepresentasikan meja yang bisa ditempati oleh pelanggan dan menyimpan status pesanan.
+3. Player: Kelas ini memungkinkan pemain untuk melakukan tindakan seperti mengambil pesanan, mengantar pesanan, dan membersihkan meja.
+4. Game: Kelas yang mengelola jalannya permainan, termasuk antrian pelanggan, interaksi dengan meja, dan menu permainan
 
-3. Notifikasi Pesanan
-Ketika status pesanan berubah menjadi InKitchen, program mensimulasikan notifikasi kepada pelayan bahwa pesanan siap diantarkan ke meja.
+**Menu Permainan**
+Program ini menawarkan lima opsi interaktif dalam menu:
+1. Tempatkan pelanggan di meja: Menempatkan pelanggan yang ada di antrian ke meja kosong (1-4).
+2. Ambil pesanan: Mengambil pesanan dari meja tertentu yang telah ditempati oleh pelanggan.
+3. Antar pesanan: Mengantar pesanan ke meja yang sesuai, setelah itu pelanggan otomatis membayar.
+4. Bersihkan meja: Membersihkan meja setelah pelanggan telah membayar.
+5. Keluar: Mengakhiri permainan.
 
-4. Simulasi Waktu
-Waktu disimulasikan dalam interval 1 detik selama 60 detik. Status pesanan dan emosi pelanggan diperbarui setiap detik.
-
-Alur Program
-Pada awal simulasi, beberapa meja diinisialisasi dengan status pesanan yang berbeda. Selama simulasi, program akan:
-
-Menurunkan emosi pelanggan jika mereka menunggu lama.
-Mengubah status pesanan secara otomatis dari NotTaken menjadi InKitchen, lalu Served.
-Mengembalikan emosi pelanggan ke 5 setelah pesanan diantar.
-Menampilkan status pesanan dan emosi pelanggan setiap detik.
-Struktur Kelas
-Order: Mengelola status dan detail pesanan.
-CustomerEmotion: Mengatur nilai emosi pelanggan dan perubahan seiring waktu.
-Table: Mengelola pesanan dan emosi pelanggan di meja serta memberikan notifikasi saat pesanan siap.
+**Catatan Pengembangan**
+1. Pelanggan tidak dapat duduk di meja yang telah ditempati.
+2. Pesanan hanya dapat diambil dari meja yang sudah ditempati pelanggan.
+3. Meja hanya dapat dibersihkan setelah pelanggan membayar.
+4. Game mengelola maksimal 2 pelanggan dalam antrian dan 4 meja di restoran.
